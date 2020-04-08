@@ -10,9 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     let identifiers: [String] = {
-        return ["Europe/London"]
-        let ids = TimeZone.knownTimeZoneIdentifiers
-        return Array(ids.reversed().dropFirst(ids.count - 4))
+        return ["Europe/London", "Europe/Vienna", "Australia/Sydney", "Asia/Tokyo", "Asia/Jakarta"]
     }()
 
     var rows: [[TimeZone]] {
@@ -47,12 +45,12 @@ struct ContentView: View {
                             VStack {
                                 ClockView(timeZone: timeZone)
                                     .scaledToFit()
-                                Text(timeZone.identifier)
-                                    .font(.system(.caption))
+                                Text(timeZone.identifier.split(separator: "/").last ?? "")
+                                    .font(.system(.subheadline))
                                     .lineLimit(1)
                             }
                         }
-                    }
+                    }.padding(.bottom, 20)
                 }
             }.padding(10)
         }
