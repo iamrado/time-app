@@ -82,7 +82,7 @@ private struct ClockHands: View {
                     path.addLine(to: CGPoint(x: g.size.width / 2,
                                              y: g.size.height / 2))
                 }
-                .stroke(Color(.red), lineWidth: 1 * g.size.width * 0.003)
+                .stroke(Color(.systemRed), lineWidth: 1 * g.size.width * 0.003)
                 .rotationEffect(Angle(degrees: self.seconds * 360 / 60))
 
                 Path { path in
@@ -90,7 +90,7 @@ private struct ClockHands: View {
                     path.addLine(to: CGPoint(x: g.size.width / 2,
                                              y: g.size.height / 2))
                 }
-                .stroke(Color(.black), lineWidth: 2 * g.size.width * 0.003)
+                .stroke(Color(.label), lineWidth: 2 * g.size.width * 0.003)
                 .rotationEffect(Angle(degrees: self.minutes * 360 / 60))
 
                 Path { path in
@@ -98,7 +98,7 @@ private struct ClockHands: View {
                     path.addLine(to: CGPoint(x: g.size.width / 2,
                                              y: g.size.height / 2))
                 }
-                .stroke(Color(.black), lineWidth: 4 * g.size.width * 0.003)
+                .stroke(Color(.label), lineWidth: 4 * g.size.width * 0.003)
                 .rotationEffect(Angle(degrees: self.hours * 360 / 12))
             }
         }
