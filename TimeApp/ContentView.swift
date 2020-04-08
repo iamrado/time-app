@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     let identifiers: [String] = {
+        return ["Europe/London"]
         let ids = TimeZone.knownTimeZoneIdentifiers
         return Array(ids.reversed().dropFirst(ids.count - 4))
     }()

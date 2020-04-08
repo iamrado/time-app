@@ -35,7 +35,7 @@ struct ClockView: View {
                     .padding(40 * g.size.width * 0.003)
                 ClockHands(seconds: self.seconds, minutes: self.minutes, hours: self.hours)
                     .onFrame { _ in
-                        let time = Time(date: Date(), timeZone: self.timeZone)
+                        let time = TimeModel(date: Date(), timeZone: self.timeZone)
                         self.seconds = time.seconds
                         self.minutes = time.minutes
                         self.hours = time.hours

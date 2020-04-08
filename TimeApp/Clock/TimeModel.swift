@@ -8,14 +8,16 @@
 
 import Foundation
 
-struct Time {
+struct TimeModel {
     let hours: Double
     let minutes: Double
     let seconds: Double
 
     init(date: Date, timeZone: TimeZone = .current) {
-        let calendar = Calendar.current
-        let timeZoneOffset = TimeInterval(timeZone.secondsFromGMT(for: date))
+        var calendar = Calendar.current
+        calendar.timeZone = timeZone
+
+        let timeZoneOffset = TimeInterval(calendar.timeZone.secondsFromGMT() - timeZone.secondsFromGMT())
         let timeZoneDate = Date(timeIntervalSince1970: date.timeIntervalSince1970 + timeZoneOffset)
 
         let hour = calendar.component(.hour, from: timeZoneDate)
@@ -24,6 +26,6 @@ struct Time {
 
         hours = Double(hour) + secondsSinceLastHour / (60 * 60 * 24)
         minutes = secondsSinceLastHour / 60
-        seconds = secondsSinceLastHour
+        seconds = secondsSinceLastHour - floor(minutes) * 60
     }
 }
