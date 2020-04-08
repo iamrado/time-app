@@ -14,6 +14,10 @@
 		1A9A647723F587A1002D66D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A647623F587A1002D66D7 /* Preview Assets.xcassets */; };
 		1A9A647A23F587A1002D66D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A647823F587A1002D66D7 /* LaunchScreen.storyboard */; };
 		1A9A648523F587A1002D66D7 /* time_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A648423F587A1002D66D7 /* time_appTests.swift */; };
+		1A9A649123F5885B002D66D7 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A649023F5885B002D66D7 /* ClockView.swift */; };
+		1A9A649323F6991E002D66D7 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A649223F6991E002D66D7 /* TimeModel.swift */; };
+		1AF8F238243DBF940082D567 /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8F236243DBF940082D567 /* DisplayLink.swift */; };
+		1AF8F239243DBF940082D567 /* OnFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF8F237243DBF940082D567 /* OnFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		1A9A648023F587A1002D66D7 /* time appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "time appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9A648423F587A1002D66D7 /* time_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = time_appTests.swift; sourceTree = "<group>"; };
 		1A9A648623F587A1002D66D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A9A649023F5885B002D66D7 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		1A9A649223F6991E002D66D7 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
+		1AF8F236243DBF940082D567 /* DisplayLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
+		1AF8F237243DBF940082D567 /* OnFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 		1A9A646C23F5879C002D66D7 /* time app */ = {
 			isa = PBXGroup;
 			children = (
+				1AF8F234243DBF7C0082D567 /* Helpers */,
+				1A9A648F23F58819002D66D7 /* Clock */,
 				1A9A646D23F5879C002D66D7 /* AppDelegate.swift */,
 				1A9A646F23F5879C002D66D7 /* SceneDelegate.swift */,
 				1A9A647123F5879C002D66D7 /* ContentView.swift */,
@@ -105,6 +115,32 @@
 				1A9A648623F587A1002D66D7 /* Info.plist */,
 			);
 			path = "time appTests";
+			sourceTree = "<group>";
+		};
+		1A9A648F23F58819002D66D7 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				1A9A649023F5885B002D66D7 /* ClockView.swift */,
+				1A9A649223F6991E002D66D7 /* TimeModel.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		1AF8F234243DBF7C0082D567 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8F235243DBF880082D567 /* DisplayLink */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1AF8F235243DBF880082D567 /* DisplayLink */ = {
+			isa = PBXGroup;
+			children = (
+				1AF8F236243DBF940082D567 /* DisplayLink.swift */,
+				1AF8F237243DBF940082D567 /* OnFrame.swift */,
+			);
+			path = DisplayLink;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9A646E23F5879C002D66D7 /* AppDelegate.swift in Sources */,
+				1A9A649123F5885B002D66D7 /* ClockView.swift in Sources */,
+				1AF8F239243DBF940082D567 /* OnFrame.swift in Sources */,
 				1A9A647023F5879C002D66D7 /* SceneDelegate.swift in Sources */,
 				1A9A647223F5879C002D66D7 /* ContentView.swift in Sources */,
+				1AF8F238243DBF940082D567 /* DisplayLink.swift in Sources */,
+				1A9A649323F6991E002D66D7 /* TimeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
