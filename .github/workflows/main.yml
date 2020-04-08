@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - develop
+      - feature/*
+
+jobs:
+  test:
+    name: Test
+    runs-on: macOS-latest
+
+    steps:
+      - name: Bundle Install
+        run: bundle install
+      
+      - name: Build and test
+        run: bundle exec fastlane scan
