@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:time app.xcodeproj">
+      location = "self:/Users/rado/projects/time app/time-app.xcodeproj">
    </FileRef>
 </Workspace>
