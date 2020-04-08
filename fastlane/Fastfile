@@ -13,6 +13,10 @@
 opt_out_usage
 default_platform(:ios)
 
+before_all do
+  xcversion(version: "11.4")
+end
+
 platform :ios do
   desc "Run tests"
   lane :test do

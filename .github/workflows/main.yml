@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test
+    name: Run Unit Tests
     runs-on: macOS-latest
 
     steps:
@@ -24,6 +24,13 @@ jobs:
 
       - name: Bundle Install
         run: bundle install --jobs 4 --retry 3
+
+      - name: Cache Swift Package Manager
+        uses: actions/cache@v1
+        with:
+          path: .build
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: ${{ runner.os }}-spm-
 
       - name: Build and test
         run: bundle exec fastlane scan
