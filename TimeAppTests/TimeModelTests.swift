@@ -19,7 +19,7 @@ class TimeModelTests: XCTestCase {
 
         let subject = TimeModel(date: time, timeZone: timezone)
 
-        XCTAssertEqual(subject.hours, 1.01, accuracy: 0.01)
+        XCTAssertEqual(subject.hours, 1.256, accuracy: 0.001)
         XCTAssertEqual(subject.minutes, 15.4)
         XCTAssertEqual(subject.seconds, 24.0)
     }

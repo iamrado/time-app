@@ -24,7 +24,7 @@ struct TimeModel {
         let hoursDate = calendar.date(bySettingHour: hour, minute: 0, second: 0, of: timeZoneDate, matchingPolicy: .strict, repeatedTimePolicy: .first, direction: .forward)
         let secondsSinceLastHour = timeZoneDate.timeIntervalSince(hoursDate!)
 
-        hours = Double(hour) + secondsSinceLastHour / (60 * 60 * 24)
+        hours = Double(hour) + secondsSinceLastHour / 60 / 60
         minutes = secondsSinceLastHour / 60
         seconds = secondsSinceLastHour - floor(minutes) * 60
     }
