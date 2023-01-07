@@ -11,14 +11,12 @@ import SwiftUI
 struct ClockView: View {
     let borderColor = Color(.systemFill)
     let borderWidth: CGFloat = 2
-    let timeZone: TimeZone
 
-    @State private var seconds: Double = 0
-    @State private var minutes: Double = 0
-    @State private var hours: Double = 0
+    @StateObject private var model: TimeModel
+    @State private var isActive = false
 
     init(timeZone: TimeZone) {
-        self.timeZone = timeZone
+        _model = .init(wrappedValue: TimeModel(date: Date(), timeZone: timeZone))
     }
 
     var body: some View {
@@ -27,20 +25,23 @@ struct ClockView: View {
                 Circle()
                     .fill(Color(.systemBackground))
                 Circle()
-                    .stroke(self.borderColor, lineWidth: self.borderWidth * g.size.width * 0.003)
-                    .padding(self.borderWidth)
+                    .stroke(borderColor, lineWidth: borderWidth * g.size.width * 0.003)
+                    .padding(borderWidth)
 
                 ClockMarksView()
                 ClockHoursView()
                     .padding(40 * g.size.width * 0.003)
-                ClockHands(seconds: self.seconds, minutes: self.minutes, hours: self.hours)
-                    .onFrame { _ in
-                        let time = TimeModel(date: Date(), timeZone: self.timeZone)
-                        self.seconds = time.seconds
-                        self.minutes = time.minutes
-                        self.hours = time.hours
-                }
+                ClockHands(seconds: model.seconds, minutes: model.minutes, hours: model.hours)
             }
+        }
+        .onAppear {
+            isActive = true
+        }
+        .onDisappear {
+            isActive = false
+        }
+        .onFrame(isActive: isActive) { _ in
+            model.update()
         }
     }
 }
