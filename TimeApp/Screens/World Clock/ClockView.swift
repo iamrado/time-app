@@ -12,8 +12,11 @@ struct ClockView: View {
     let borderColor = Color(.systemFill)
     let borderWidth: CGFloat = 2
 
-    @StateObject private var model: TimeModel
-    @State private var isActive = false
+    @StateObject
+    private var model: TimeModel
+
+    @State
+    private var isActive = false
 
     init(timeZone: TimeZone) {
         _model = .init(wrappedValue: TimeModel(date: Date(), timeZone: timeZone))
@@ -112,7 +115,7 @@ private struct ClockHoursView: View {
             ForEach(1..<13) { hour in
                 Text(String(hour))
                     .font(.system(size: 0.1 * g.size.width, weight: .semibold, design: .rounded))
-                    .position(HourAngle(hour: hour, diameter: g.size.width / 2).origin)
+                    .position(HourAngle(hour: hour, diameter: g.size.height / 2).origin)
             }
         }
     }

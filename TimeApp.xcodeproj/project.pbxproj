@@ -14,6 +14,11 @@
 		1A0DBA8124420F040051F7EA /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DBA8024420F040051F7EA /* StopWatchView.swift */; };
 		1A0DBA8424420F180051F7EA /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0DBA8324420F180051F7EA /* TimerView.swift */; };
 		1A1A58482445B98700FF6F22 /* TabItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A58472445B98700FF6F22 /* TabItemViewModel.swift */; };
+		1A82CD0A296A1CA800AD1A53 /* WorldClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A82CD09296A1CA800AD1A53 /* WorldClockViewModel.swift */; };
+		1A82CD0C296AC07100AD1A53 /* AddClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A82CD0B296AC07100AD1A53 /* AddClockView.swift */; };
+		1A82CD0E296AC48000AD1A53 /* TimeZoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A82CD0D296AC48000AD1A53 /* TimeZoneModel.swift */; };
+		1A82CD10296BE98C00AD1A53 /* AddClockRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A82CD0F296BE98C00AD1A53 /* AddClockRowView.swift */; };
+		1A82CD12296BEDDE00AD1A53 /* AddClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A82CD11296BEDDE00AD1A53 /* AddClockViewModel.swift */; };
 		1A9A646E23F5879C002D66D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A646D23F5879C002D66D7 /* AppDelegate.swift */; };
 		1A9A647023F5879C002D66D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A646F23F5879C002D66D7 /* SceneDelegate.swift */; };
 		1A9A647423F587A1002D66D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A647323F587A1002D66D7 /* Assets.xcassets */; };
@@ -44,6 +49,11 @@
 		1A0DBA8024420F040051F7EA /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
 		1A0DBA8324420F180051F7EA /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		1A1A58472445B98700FF6F22 /* TabItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewModel.swift; sourceTree = "<group>"; };
+		1A82CD09296A1CA800AD1A53 /* WorldClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewModel.swift; sourceTree = "<group>"; };
+		1A82CD0B296AC07100AD1A53 /* AddClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClockView.swift; sourceTree = "<group>"; };
+		1A82CD0D296AC48000AD1A53 /* TimeZoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneModel.swift; sourceTree = "<group>"; };
+		1A82CD0F296BE98C00AD1A53 /* AddClockRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClockRowView.swift; sourceTree = "<group>"; };
+		1A82CD11296BEDDE00AD1A53 /* AddClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClockViewModel.swift; sourceTree = "<group>"; };
 		1A9A646A23F5879C002D66D7 /* TimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A9A646D23F5879C002D66D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A9A646F23F5879C002D66D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,9 +113,14 @@
 		1A0DBA7924420B360051F7EA /* World Clock */ = {
 			isa = PBXGroup;
 			children = (
+				1A82CD0F296BE98C00AD1A53 /* AddClockRowView.swift */,
+				1A82CD0B296AC07100AD1A53 /* AddClockView.swift */,
+				1A82CD11296BEDDE00AD1A53 /* AddClockViewModel.swift */,
 				1A9A649023F5885B002D66D7 /* ClockView.swift */,
 				1A9A649223F6991E002D66D7 /* TimeModel.swift */,
+				1A82CD0D296AC48000AD1A53 /* TimeZoneModel.swift */,
 				1A0DBA7A24420B4C0051F7EA /* WorldClockView.swift */,
+				1A82CD09296A1CA800AD1A53 /* WorldClockViewModel.swift */,
 			);
 			path = "World Clock";
 			sourceTree = "<group>";
@@ -305,12 +320,17 @@
 			files = (
 				1A0DBA7B24420B4C0051F7EA /* WorldClockView.swift in Sources */,
 				1A9A646E23F5879C002D66D7 /* AppDelegate.swift in Sources */,
+				1A82CD10296BE98C00AD1A53 /* AddClockRowView.swift in Sources */,
+				1A82CD0C296AC07100AD1A53 /* AddClockView.swift in Sources */,
+				1A82CD0A296A1CA800AD1A53 /* WorldClockViewModel.swift in Sources */,
 				1A0DBA74244203CF0051F7EA /* MainView.swift in Sources */,
 				1A9A649123F5885B002D66D7 /* ClockView.swift in Sources */,
 				1AF8F239243DBF940082D567 /* OnFrame.swift in Sources */,
 				1A0DBA8424420F180051F7EA /* TimerView.swift in Sources */,
 				1A9A647023F5879C002D66D7 /* SceneDelegate.swift in Sources */,
 				1A0DBA8124420F040051F7EA /* StopWatchView.swift in Sources */,
+				1A82CD12296BEDDE00AD1A53 /* AddClockViewModel.swift in Sources */,
+				1A82CD0E296AC48000AD1A53 /* TimeZoneModel.swift in Sources */,
 				1A0DBA7E24420EE50051F7EA /* AlarmView.swift in Sources */,
 				1AF8F238243DBF940082D567 /* DisplayLink.swift in Sources */,
 				1A9A649323F6991E002D66D7 /* TimeModel.swift in Sources */,
@@ -401,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -457,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

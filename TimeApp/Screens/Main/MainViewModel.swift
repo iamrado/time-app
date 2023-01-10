@@ -10,24 +10,24 @@ import SwiftUI
 
 final class MainViewModel {
     let tabs: [TabItemViewModel]
-
+    
     init() {
-        let clock = TabItemViewModel(title: NSLocalizedString("World Clock", comment: ""),
-                                 image: Image(systemName: "clock"),
-                                 view: WorldClockView())
-
-        let alarm = TabItemViewModel(title: NSLocalizedString("Alarm", comment: ""),
-                                 image: Image(systemName: "alarm"),
-                                 view: AlarmView())
-
-        let stopwatch = TabItemViewModel(title: NSLocalizedString("Stop Watch", comment: ""),
-                                     image: Image(systemName: "stopwatch"),
-                                     view: StopWatchView())
-
-        let timer = TabItemViewModel(title: NSLocalizedString("Timer", comment: ""),
-                                 image: Image(systemName: "timer"),
-                                 view: TimerView())
-
+        let clock = TabItemViewModel(title: "World Clock",
+                                     image: Image(systemName: "globe"),
+                                     view: WorldClockView())
+        
+        let alarm = TabItemViewModel(title: "Alarm",
+                                     image: Image(systemName: "alarm"),
+                                     view: AlarmView())
+        
+        let stopwatch = TabItemViewModel(title: "Stop Watch",
+                                         image: Image(systemName: "stopwatch"),
+                                         view: StopWatchView())
+        
+        let timer = TabItemViewModel(title: "Timer",
+                                     image: Image(systemName: "timer"),
+                                     view: TimerView())
+        
         tabs = [clock, alarm, stopwatch, timer]
     }
 }
